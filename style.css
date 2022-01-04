@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,500,600,700&display=swap');
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+} 
+
+td{
+ width: max-content;
+ min-width: 30px;
+ height: 30px;
+ border: 1px solid;
+ text-align: center;
+ font-size: 30px;
+ font-weight: 600;
+ color: black;
+ padding: 0px;
+ font-family: 'Comic Neue';
+} 
+
+.dash{
+  opacity: 0;
+ }
+ .des{
+  text-align: center;
+  height: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(45deg, grey, white);
+  border-radius: 50%;
+  padding: 0px;
+  font-family: 'Comic Neue';
+
+ }
+ button{
+ margin: auto;
+ width: 50px;
+ height: 50px;
+ font-size: 20px;
+ font-family: Comfortaa;
+ color: rgb(166, 252, 255);
+ background: blueviolet;
+ border-radius: 50%;
+ padding: 0px;
+ user-select: none;
+ }
+ 
+ #upto, #cd{
+ width: 100px;
+ height: 40px;
+ font-size: 40px;
+ font-weight: 500;
+ text-align: center;
+ color: rgb(166, 252, 255);
+ background: blueviolet;
+ border-radius: 20px;
+ padding: 5px;
+ }
+ 
+ #tabreqx{
+ margin: 30px 60vw;
+ opacity: 0;
+ text-align: center;
+ border-radius: 10px;
+ padding: 10px;
+ position: absolute;
+ }
+ .anmin{
+  animation: xin 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes xin {
+  from{
+    width: 0px;
+    height: 0px;
+    margin-top: -10px;
+    opacity: 0;
+  }
+  to{
+    width: 100px;
+    height: 400px;
+    margin-top: 10px;
+    opacity: 1;
+  }
+}
+
+#reqx{
+  background: radial-gradient(white, rgb(241, 82, 82));
+}
+
+ #out{
+ width: 0px; height: 0px;
+ opacity: 0;
+ }
+
+ sup{
+   font-size: 15px;
+ }
+
+#adde{
+margin: -10px auto;
+opacity: 0;
+position: relative;
+user-select: none;
+}
+.anm{
+  animation: animate 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  from{
+    margin: -10px auto;
+    opacity: 0;
+  }
+  to{
+    margin: 10px auto;
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+	 <title>Newton's Interpolation</title>
+	 <link rel="stylesheet" href="style.css" type="text/css"/>
+	 <script src="javascript.js"></script>
+ </head>
+	 <body>
+
+  <textarea readonly id="out"></textarea>
+
+ <input type="number" id="upto" onkeydown="if (event.keyCode == 13) {creat()}"/>
+ <input type="number" id="cd" oninput="xvalues()"/>
+ <div id="tabreqx">
+   <table id="reqx">
+     <tr>
+       <td>x</td>
+       <td>y</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <button id="adnr" onclick="nr()">+</button>
+</div>
+
+ <button onclick="creat()">
+  <i class="fa fa-plus"></i>
+</button>
+ <button onclick="f()">
+  <i class="fas fa-play"></i>
+</button>
+ <button onclick="func()">
+  <i class="fa fa-search"></i>
+</button>
+ <button onclick="location.href = location.href">
+  <i class="fa fa-refresh"></i>
+</button>
+
+ <div id="adde">
+   <input type="checkbox" id="dg" onclick="k()"></input>
+   <span id="bdt"> Add design</span>
+ </div>
+
+ <table id="tab"></table>
+
+	 </body>
+ </html>
