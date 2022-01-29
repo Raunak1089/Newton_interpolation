@@ -54,6 +54,21 @@ function xvalues(){
   }
 }
 
+// DEFINE FUNCTIONS
+
+  function fac(x){
+    let num = 1;
+	for (let i=1; i<=x; i++){
+	    num*=i;
+	}
+    return num;
+  }
+
+  function approx(num, decplace) {
+    return Math.round((10**decplace)*num)/10**decplace;
+  }
+
+
 // MAIN FUNCTION
 
 function f(){
@@ -67,18 +82,7 @@ function f(){
   var cd = Number(document.getElementById('cd').value);
   var tab = document.getElementById('tab');
 
-  function fac(x){
-    let num = 1;
-	for (let i=1; i<=x; i++){
-	    num*=i;
-	}
-    return num;
-  }
-  function approx(num, decplace) {
-    return Math.round((10**decplace)*num)/10**decplace;
-  }
-	
-
+  
   // FORWARD FORMULA
 
   let x = [];
