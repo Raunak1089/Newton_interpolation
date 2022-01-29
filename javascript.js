@@ -61,20 +61,23 @@ function f(){
   viewpol.classList.add('anm8');
   viewgr.classList.add('anm9');
 
-   // DEFINE VARIABLES AND FACTORIAL
+   // DEFINE VARIABLES AND FUNCTIONS
 
   var u = Number(document.getElementById('upto').value);
   var cd = Number(document.getElementById('cd').value);
   var tab = document.getElementById('tab');
 
   function fac(x){
-  let num = 1;
-  for (let i=1; i<=x; i++){
-    num*=i;
+    let num = 1;
+	for (let i=1; i<=x; i++){
+	    num*=i;
+	}
+    return num;
   }
-  return num;
+  function approx(num, decplace) {
+    return Math.round((10**decplace)*num)/10**decplace;
   }
-
+	
 
   // FORWARD FORMULA
 
@@ -347,7 +350,7 @@ function func(){
 
   for (let i=1; i<reqx1.rows.length; i++) {
     var arg = reqx1.rows[i].cells[0].innerHTML;
-    reqx1.rows[i].cells[1].innerHTML=eval(poly.replace(/x/g, arg))
+    reqx1.rows[i].cells[1].innerHTML=approx(eval(poly.replace(/x/g, arg)), 4)
   }
 
   for (let i=1; i<reqx2.rows.length; i++) {
@@ -356,7 +359,7 @@ function func(){
 
   for (let i=1; i<reqx2.rows.length; i++) {
     var arg = reqx2.rows[i].cells[0].innerHTML;
-    reqx2.rows[i].cells[1].innerHTML=eval(polynew.replace(/x/g, arg))
+    reqx2.rows[i].cells[1].innerHTML=approx(eval(polynew.replace(/x/g, arg)), 4)
   }
 
 
