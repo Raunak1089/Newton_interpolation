@@ -83,6 +83,7 @@ td{
  margin: 20px 10px;
  width: 100px;
  height: 40px;
+ font-size: 1.2em;
  font-weight: 500;
  font-family: Abril Fatface;
  text-align: center;
@@ -227,6 +228,7 @@ td{
   width: 156px;
   height: 65px;
   text-align: center;
+  font-size: 0.8em;
   font-family: Comfortaa;
   color: white;
   background: rgb(109, 133, 241);
