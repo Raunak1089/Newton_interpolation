@@ -12,7 +12,8 @@ body{
 justify-content: center; 
 align-items: center; 
 min-height: 100vh;
-background: #dadada; 
+background: #dadada;
+font-size: 1.6em;
 transition: 0.5s;
 user-select: none;
 overflow-x: hidden;
@@ -56,7 +57,6 @@ td{
  width: 70%;
  max-width: 500px;
  height: fit-content;
- font-size: 30px;
  font-weight: 500;
  text-align: center;
  color: rgb(182, 0, 0);
@@ -72,7 +72,6 @@ td{
  width: 70%;
  max-width: 500px;
  height: fit-content;
- font-size: 40px;
  font-weight: 500;
  text-align: center;
  color: rgb(182, 0, 0);
@@ -84,7 +83,6 @@ td{
  margin: 20px 10px;
  width: 100px;
  height: 40px;
- font-size: 40px;
  font-weight: 500;
  font-family: Abril Fatface;
  text-align: center;
@@ -103,7 +101,6 @@ td{
  max-width:  70%;
  height: fit-content;
  font-family: Comfortaa;
- font-size: 20px;
  justify-content: center;
  border-radius: 10px;
  padding: 20px 0px;
@@ -132,7 +129,6 @@ td{
  height: fit-content;
  font-family: Comfortaa;
  text-align: center;
- font-size: 20px;
  padding: 10px 10px;
  background: none;
  opacity: 0;
@@ -182,7 +178,6 @@ td{
  min-width: 50%;
  margin-left: 30%;
  transform:translateX(-50%);
- font-size: 20px;
  font-weight: 500;
  font-family: Comfortaa;
  text-align: center;
@@ -232,7 +227,6 @@ td{
   width: 156px;
   height: 65px;
   text-align: center;
-  font-size: 20px;
   font-family: Comfortaa;
   color: white;
   background: rgb(109, 133, 241);
@@ -288,7 +282,6 @@ animation: anm9 1.5s forwards;
 }
 
 .tabtitle{
- font-size: 20px;
  font-family: Comfortaa;
 }
 
@@ -299,7 +292,6 @@ animation: anm9 1.5s forwards;
  margin-bottom: 10px;
  width: 100%;
  height: fit-content;
- font-size: 20px;
  font-weight: 500;
  text-align: center;
  color: rgb(182, 0, 0);
@@ -315,7 +307,6 @@ height: fit-content;
 margin: 20% 40%;
 transform: translate(-50%, -50%);
 position: absolute;
-font-size: 50px;
 font-weight: 700;
 background: #ccc;
 color: red;
