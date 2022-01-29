@@ -1,22 +1,29 @@
-<!DOCTYPE html>
- <html>
- <head>
-	 <title>Newton's Interpolation</title>
-	 <link rel="stylesheet" href="style.css" type="text/css"/>
-         <script src="https://kit.fontawesome.com/ea77d645dc.js" crossorigin="anonymous"></script>
-         <script src="https://unpkg.com/mathjs@10.0.2/lib/browser/math.js"></script>
+<!DOCTYPE html> 
+<html> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.55, user-scalable=0">
+  <script src="https://kit.fontawesome.com/ea77d645dc.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/mathjs@10.0.2/lib/browser/math.js"></script>
+  <script src="https://raunak1089.github.io/all_scripts/disablescroll.js"></script>
+<head> 
 
-	 <script src="javascript.js"></script>
- </head>
-	 <body>
+</head> 
 
-  <textarea readonly id="out"></textarea>
+<body> 
 
- <input type="number" id="upto" onkeydown="if (event.keyCode == 13) {creat()}"/>
- <input type="number" id="cd" oninput="xvalues()"/>
- <div id="tabreqx">
-   <table id="reqx">
-     <tr>
+  <textarea readonly id="out1"></textarea>
+  <textarea readonly id="out2"></textarea>
+
+<div id="inpcont">
+ <span>Enter number of data:</span><input type="number" id="upto" oninput="creat()"/>
+ <p>
+ <div id="cdtxt" style="display: none; transition: 2s;">Enter the common difference of argument values:<input type="number" id="cd" oninput="xvalues()"/></div>
+</div>
+
+<div id="tabreq">
+<div id="tabreqx1">
+   <table id="reqx1">
+    <span class="tabtitle">Forward</span>
+    <tr>
        <td>x</td>
        <td>y</td>
     </tr>
@@ -25,28 +32,56 @@
       <td></td>
     </tr>
   </table>
-  <button id="adnr" onclick="nr()">+</button>
+  <button onclick="nr1()"><i class="fa fa-plus"></i></button>
 </div>
 
- <button onclick="creat()">
-  <i class="fa fa-plus"></i>
-</button>
+<div id="tabreqx2">
+   <table id="reqx2">
+    <span class="tabtitle">Backward</span>
+    <tr>
+       <td>x</td>
+       <td>y</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <button onclick="nr2()"><i class="fa fa-plus"></i></button>
+</div>
+</div>
+
+<div id="butcont">
  <button onclick="f()">
   <i class="fas fa-play"></i>
-</button>
+ </button>
  <button onclick="func()">
   <i class="fa fa-search"></i>
-</button>
+ </button>
  <button onclick="location.href = location.href">
   <i class="fa fa-refresh"></i>
-</button>
+ </button>
+</div>
 
- <div id="adde">
-   <input type="checkbox" id="dg" onclick="k()"></input>
-   <span id="bdt"> Add design</span>
- </div>
+<div id="text1">Please enter the arguents and entries of your data:</span>
+<div id="gettab"></div>
 
- <table id="tab"></table>
+<div id="viewpol" onclick="ShowPolynomial()">View Polynomials</div>
 
-	 </body>
- </html>
+<div id="outs">
+  <p>Forward polynomial:</p>
+  <div id="fd" onclick= "copyit(this)"></div>
+  <p>Backward polynomial:</p>
+  <div id="bd" onclick= "copyit(this)"></div>
+</div>
+
+<div id="viewgr" onclick="ShowGraph()">View Graph</div>
+
+<div id="graph">
+  <canvas id="myCanvas" width="500" height="500">
+  </canvas>
+</div>
+
+
+</body>
+</html>
