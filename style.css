@@ -53,7 +53,8 @@ td{
  #inpcont{
  margin: 20px 50%;
  transform:translateX(-50%);
- width: 500px;
+ width: 70%;
+ max-width: 500px;
  height: fit-content;
  font-size: 30px;
  font-weight: 500;
@@ -68,7 +69,8 @@ td{
  #butcont{
  margin: 20px 50%;
  transform:translateX(-50%);
- width: 500px;
+ width: 70%;
+ max-width: 500px;
  height: fit-content;
  font-size: 40px;
  font-weight: 500;
