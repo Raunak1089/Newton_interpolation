@@ -2,7 +2,7 @@
 var tab = document.createElement('table'); tab.id = 'tab';
 document.getElementById('gettab').appendChild(tab);
 
-// CREATE TABLE
+// CREATE TABLE _______________________________________________________
 
 function creat(){
 
@@ -39,7 +39,7 @@ i+=1
 
 }
 
-// PUT X VALUES
+// PUT X VALUES _______________________________________________________
 
 function xvalues(){
   var cd = document.getElementById('cd').value;
@@ -54,7 +54,7 @@ function xvalues(){
   }
 }
 
-// DEFINE FUNCTIONS
+// DEFINE FUNCTIONS _______________________________________________________
 
   function fac(x){
     let num = 1;
@@ -69,7 +69,7 @@ function xvalues(){
   }
 
 
-// MAIN FUNCTION
+// MAIN FUNCTION _______________________________________________________
 
 function f(){
 
@@ -345,7 +345,7 @@ for (let i = 0; i < x.length; i++) {
 
 }
 
-// CALCULATE Y VALUES
+// CALCULATE Y VALUES _______________________________________________________
 
 function func(){
 
@@ -369,7 +369,7 @@ function func(){
 
 }
 
-// ADD ROW TO CALCULATION TABLE
+// ADD ROW TO CALCULATION TABLE _______________________________________________________
 
 function nr1(){
   var reqx1 = document.getElementById('reqx1');
@@ -401,7 +401,7 @@ function nr2(){
 
 }
 
-// TWO BUTTONS
+// TWO BUTTONS _______________________________________________________
 
 var shwpol = false;
 
