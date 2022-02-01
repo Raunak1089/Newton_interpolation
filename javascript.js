@@ -15,7 +15,6 @@ document.getElementById('gettab').removeChild(oldtab);
 
 var tab = document.createElement('table'); tab.id = 'tab';
 document.getElementById('gettab').appendChild(tab);
-tab.onclick=function(){document.getElementById('cdtxt').style.display='inline';}
 
 let i = 0;
 while (i <= 1) {
@@ -28,26 +27,33 @@ while (i <= 1) {
 i+=1
 }
 
-  tab.rows[0].cells[0].innerHTML = 'x';
-  tab.rows[1].cells[0].innerHTML = 'y';
+tab.rows[0].cells[0].innerHTML = 'x';
+tab.rows[1].cells[0].innerHTML = 'y';
 
+tab.rows[0].cells[0].style.cssText = "color: #fff; background: rgb(0, 197, 49); border: 1px solid black;"
+tab.rows[1].cells[0].style.cssText = "color: #fff; background: rgb(0, 197, 49); border: 1px solid black;"
 
-  for (let i=1; i<=u; i++){
-    tab.rows[0].cells[1].contentEditable = true;
-    tab.rows[1].cells[i].contentEditable = true;
-  }
+for (let i=1; i<=u; i++){
+  tab.rows[0].cells[1].contentEditable = true;
+  tab.rows[0].cells[2].contentEditable = true;
+  tab.rows[1].cells[i].contentEditable = true;
+}
+
+tab.rows[0].cells[1].addEventListener("input", function() {xvalues()}, false);
+tab.rows[0].cells[2].addEventListener("input", function() {xvalues()}, false);
 
 }
 
 // PUT X VALUES _______________________________________________________
 
 function xvalues(){
-  var cd = document.getElementById('cd').value;
   var tab = document.getElementById('tab');
+  document.getElementById('cd').value=Number(tab.rows[0].cells[2].innerHTML)-Number(tab.rows[0].cells[1].innerHTML);
+  var cd = Number(document.getElementById('cd').value)
   var u = Number(document.getElementById('upto').value);
 
 
-  for (let i = 2; i <= u; i++){
+  for (let i = 3; i <= u; i++){
     var firstvalue = Number(tab.rows[0].cells[1].innerHTML);
     var nextvalue = (i-1)*cd;
     tab.rows[0].cells[i].innerHTML= firstvalue+nextvalue;
