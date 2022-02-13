@@ -27,20 +27,20 @@ while (i <= 1) {
 i+=1
 }
 
-tab.rows[0].cells[0].innerHTML = 'x';
-tab.rows[1].cells[0].innerHTML = 'y';
+  tab.rows[0].cells[0].innerHTML = 'x';
+  tab.rows[1].cells[0].innerHTML = 'y';
 
-tab.rows[0].cells[0].style.cssText = "color: #fff; background: rgb(0, 197, 49); border: 1px solid black;"
-tab.rows[1].cells[0].style.cssText = "color: #fff; background: rgb(0, 197, 49); border: 1px solid black;"
+  tab.rows[0].cells[0].style.cssText = "color: #fff; background: rgb(0, 197, 49); border: 1px solid black;"
+  tab.rows[1].cells[0].style.cssText = "color: #fff; background: rgb(0, 197, 49); border: 1px solid black;"
 
-for (let i=1; i<=u; i++){
-  tab.rows[0].cells[1].contentEditable = true;
-  tab.rows[0].cells[2].contentEditable = true;
-  tab.rows[1].cells[i].contentEditable = true;
-}
+  for (let i=1; i<=u; i++){
+    tab.rows[0].cells[1].contentEditable = true;
+    tab.rows[0].cells[2].contentEditable = true;
+    tab.rows[1].cells[i].contentEditable = true;
+  }
 
-tab.rows[0].cells[1].addEventListener("input", function() {xvalues()}, false);
-tab.rows[0].cells[2].addEventListener("input", function() {xvalues()}, false);
+  tab.rows[0].cells[1].addEventListener("input", function() {xvalues()}, false);
+  tab.rows[0].cells[2].addEventListener("input", function() {xvalues()}, false);
 
 }
 
@@ -195,14 +195,7 @@ function p(num){
    return eval(poly.replace(/x/g, num))
 }
 
-var textareax = document.createElement('textarea');
-textareax.id= "xv"; textareax.style.display= "none";
-document.body.appendChild(textareax);
-
-var textareay = document.createElement('textarea');
-textareay.id= "yv"; textareay.style.display= "none";
-document.body.appendChild(textareay);
-
+var xv, yv;
 
 // SET ORIGIN
 
@@ -243,8 +236,8 @@ var dragValue;
 canvas.onmousedown = function(e) {
   dragValue = ctx;
 
-let xv = e.screenX-originx;
-let yv = e.screenY-originy;
+  xv = e.screenX-originx;
+  yv = e.screenY-originy;
 
 document.getElementById("xv").value=xv;
 document.getElementById("yv").value=yv;
@@ -257,9 +250,6 @@ document.onmouseup = function(){
 
 document.onmousemove = function(ev) {
           dragValue.clearRect(0, 0, canvas.width, canvas.height);
-
-let xv = Number(document.getElementById("xv").value);
-let yv = Number(document.getElementById("yv").value);
 
            originx = ev.screenX - xv; 
            originy = ev.screenY - yv;
@@ -275,8 +265,8 @@ let yv = Number(document.getElementById("yv").value);
 canvas.ontouchstart = function(ev) {
            var e = ev.targetTouches[0];
            
-let xv = e.screenX-originx;
-let yv = e.screenY-originy;
+  xv = e.screenX-originx;
+  yv = e.screenY-originy;
 
 document.getElementById("xv").value=xv;
 document.getElementById("yv").value=yv;
@@ -288,8 +278,6 @@ disableScroll();
 canvas.ontouchmove = function(ev) {
            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-let xv = Number(document.getElementById("xv").value);
-let yv = Number(document.getElementById("yv").value);
 
            var e = ev.targetTouches[0];
            originx = e.screenX - xv;
