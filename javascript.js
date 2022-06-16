@@ -470,19 +470,6 @@ x.style.filter = "brightness(50%)";
 
   // COPY TEXT
 
-/*
-let text = x.innerText;
-let textArea = document.createElement('textarea');
-textArea.width='1px';
-textArea.height='1px';
-textArea.background='transparent';
-textArea.value=text;
-document.body.append(textArea);
-textArea.select();
-document.execCommand('copy');
-document.body.removeChild(textArea);
-*/
-
 navigator.clipboard.writeText(x.innerText);
 
 
